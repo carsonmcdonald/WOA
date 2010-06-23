@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="widget.css" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="widget.js"></script>
+    <script type="text/javascript">
+
+      var configs = buildConfigurationFromUrl(document.location.href);
+
+      var currentConfig = configs[0];
+      var currentConfigNumber = 0;
+
+      $(document).ready(function() 
+      {
+        if(configs.length > 1)
+        {
+          var html = '';
+          var count = 0;
+          $.each(configs, function()
+          {
+            html += '<a href="#" onclick="return switchConfig(' + count + ');" title="' + this.siteName + '"><img id="siteconfig' + count + '"' + (count == 0 ? ' style="border-top: 1px solid #000"' : '') + ' class="siteicon' + (count == 0 ? ' selected' : '') + '" src="' + this.siteIcon + '"/></a> &nbsp;';
+            count++;
+          });
+          $('#sitetypes').attr('style', 'display: block');
+          $('#sitetypes').html(html);
+        }
+        
+        loadSite(currentConfig, true);
+      });
+
+      function switchConfig(newConfigNumber)
+      {
+        $('#siteconfig' + currentConfigNumber).removeClass('selected').attr('style', '');
+        $('#siteconfig' + newConfigNumber).addClass('selected').attr('style', 'border-top: 1px solid #000');
+
+        currentConfig = configs[newConfigNumber];
+        currentConfig.viewType = configs[currentConfigNumber].viewType;
+
+        currentConfigNumber = newConfigNumber;
+
+        loadSite(currentConfig, true);
+
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <div id="sitetypes"></div>
+      <div id="usercontent">
+        <img class="spinner" src="spinner.gif"/>
+      </div>
+      <div id="contenttypes"><a href="#" id="myfavlink" style="border-top: 1px solid #000" class="selected" onclick="return selectList(this, 'favorites', currentConfig);">Favorites</a>|<a href="#" id="myqlink" onclick="return selectList(this, 'questions', currentConfig);">Questions</a>|<a href="#" id="mytllink" onclick="return selectList(this, 'timeline', currentConfig);">Timeline</a></div>
+      <div id="subcontent">
+        <img class="spinner" src="spinner.gif"/>
+      </div>
+      <div id="actioncontent"></div>
+    </div>
+  </body>
+</html>

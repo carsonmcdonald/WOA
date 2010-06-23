@@ -1,0 +1,46 @@
+html,body { padding: 0; margin: 0; }
+
+#content { padding: 0; margin: 0; }
+
+#usercontent { padding: 2px 2px 4px 2px; margin: 0; height: 70px; }
+#usercontent img { border: 0; width: 64px; height: 64px; }
+#usercontent p { font-size: 8pt; padding: 0; margin: 0; text-align: right; }
+#usercontent a { text-decoration: none; }
+#usercontent h3 { padding: 0; margin: 0; }
+
+#actioncontent { font-size: 8pt; text-align: right; padding: 3px; }
+#actioncontent a { text-decoration: none; }
+
+#subcontent { overflow: auto; }
+
+#sitetypes { text-align: right; display: none; }
+#contenttypes { font-size: 8pt; text-align: right; padding: 4px; clear: both; }
+#contenttypes a { text-decoration: none; }
+
+.timelineblock { font-size: 8pt; padding: 5px; }
+.timelineblock a { text-decoration: none; }
+.timelineblock a:hover { text-decoration: underline; }
+.timelinedt { text-align: right; }
+.timelinedt img { width: 16px; height: 16px; border: 0; padding-left: 4px; }
+
+.questionblock { height: 70px; font-size: 8pt; padding: 2px; }
+.questionleft { float: left; padding-right: 5px; height: 100%; }
+.questionleft img { border: 0; width: 32px; height: 32px; }
+.questionleft a { text-decoration: none; }
+.questionleft a:hover { text-decoration: underline; }
+.questionleft p { padding: 10px 0px 0px 0px; margin: 0; width: 100%; text-align: center; }
+
+.questionright a { text-decoration: none; }
+.questionright p { height: 42px; padding: 0; margin: 0; }
+
+.goldbadge,.silverbadge,.bronzebadge { background-image: url(badges.png); background-repeat: no-repeat; }
+.goldbadge { background-position:-12px 0px; padding-left: 6px; }
+.silverbadge { background-position:-6px 0px; padding-left: 6px; }
+.bronzebadge { background-position:0px 0px; padding-left: 6px; }
+.goldbadge span,.silverbadge span,.bronzebadge span { padding-left: 2px; }
+
+.spinner { width: 16px ! important; height: 16px ! important; }
+.siteicon { width: 16px; height: 16px; border: 0; }
+
+.detailtable { width: 80%; font-size: 8pt; padding-top: 2px; margin: 0; border-collapse:collapse; }
+.detailtable th,td { padding: 1px; margin: 0; text-align: center; }
