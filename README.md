@@ -26,3 +26,6 @@ woa@ioncannon.net
 ###License
 
 Except where otherwise noted MIT.
+
+  [1]: http://www.ioncannon.net/projects/woa
+  [2]: http://www.ioncannon.net/projects/woa/configure.php
