@@ -284,7 +284,7 @@ function loadSite(config, loadAll)
 
   if(loadAll)
   {
-    $.getJSON(config.siteApi + '/0.8/users/' + config.userId + '?jsonp=?', 
+    $.getJSON(config.siteApi + '/0.9/users/' + config.userId + '?jsonp=?', 
               { key: '7eDzZgpL8U69MLLAdxJoYA' }, 
               function(data) 
               {
@@ -292,7 +292,7 @@ function loadSite(config, loadAll)
               });
   }
 
-  $.getJSON(config.siteApi + '/0.8/users/' + config.userId + '/' + config.viewType + '?jsonp=?', 
+  $.getJSON(config.siteApi + '/0.9/users/' + config.userId + '/' + config.viewType + '?jsonp=?', 
             { key: '7eDzZgpL8U69MLLAdxJoYA' }, 
             function(data) 
             {

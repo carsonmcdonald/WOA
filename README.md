@@ -6,6 +6,10 @@ For up to date information see the [project page][1].
 
 The following is a short list of main features added with each release.
 
+**Version 1.1**
+
+ - Bumped up to latest API version
+
 **Version 1.0**
 
  - Initial release
